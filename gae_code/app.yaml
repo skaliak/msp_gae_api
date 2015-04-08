@@ -1,0 +1,35 @@
+application: monspotting
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /api/.*
+  script: api.app
+- url: /api/v1/.*
+  script: api.app
+- url: /styles
+  static_dir: dist/styles
+- url: /scripts
+  static_dir: dist/scripts
+- url: /views
+  static_dir: dist/views
+- url: /fonts
+  static_dir: dist/fonts
+- url: /index.html
+  static_files: dist/index.html
+  upload: dist/index.html
+- url: /
+  script: api.app
+- url: /login
+  script: api.app
+- url: /logout
+  script: api.app
+# - url: /(.+)/(.+)
+#   static_files: dist/\1/\2
+#   upload: dist/*
+
+libraries:
+- name: webapp2
+  version: latest
