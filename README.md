@@ -4,6 +4,7 @@
 Google App Engine REST API, initially a stand-alone project, and ultimately use in [this](https://github.com/skaliak/fuzzy-happiness) Android app. 
 
 Uses:
+
  - GAE Python API
  - Webapp2
  - ndb
